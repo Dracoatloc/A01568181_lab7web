@@ -34,7 +34,7 @@ const ProductInfo : React.FC<ProductInfoProps>  = (props) => {
 
   var selectedColor = "";
   var selectedSize = "";
-  if (props.product !== undefined && props.product.childSkus !== undefined) {
+  if (props.product !== undefined && props.product.childSkus !== undefined && props.product.childSkus[0] !== undefined) {
     selectedColor = props.product.childSkus[0].color;
     props.product.childSkus.forEach( (sku) => {
       colors.push(<MenuItem value={sku.color}>{sku.color}</MenuItem>);
