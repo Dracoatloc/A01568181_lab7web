@@ -1,5 +1,5 @@
-import * as React from "react";
 import "./index.css";
+import * as React from "react";
 import {
   Typography,
   AppBar,
@@ -8,22 +8,25 @@ import {
   IconButton,
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
+import { Link } from "react-router-dom";
 
 /**
- * Navigation Bar elements
+ * navigation bar elements
  * @returns NavigationBar UI elements
  */
 const NavigationBar = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" className="navbar">
+      <AppBar className="navbar" position="static">
         <Toolbar variant="dense">
           <IconButton>
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" color="inherit" component="div">
-            Chambasoft Store
-          </Typography>
+          <Link className="product-list-link" to="/">
+            <Typography variant="h6" color="inherit" component="div">
+              Chambasoft Store
+            </Typography>
+          </Link>
         </Toolbar>
       </AppBar>
     </Box>
