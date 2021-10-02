@@ -36,5 +36,10 @@ div.largeImage {
 }
 
 .crossedout {
-    text-decoration: line-through
+    text-decoration: line-through;
+}
+
+h2.comment-title {
+    font-size: 1.75rem !important;
+    font-weight: bold;
 }
